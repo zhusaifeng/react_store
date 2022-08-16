@@ -1,0 +1,10 @@
+.tag2{
+    position: absolute;
+    right: 10px;
+    /* top: 10px; */
+    font-size: .35rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    border: 1px solid rgb(15, 230, 33);
+    color: rgb(15, 230, 33);
+  }
