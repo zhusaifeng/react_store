@@ -1,0 +1,43 @@
+.book{
+    width:70px;
+    /* height:2.2rem; */
+    position: relative;
+    top:.3rem;
+    left: 10px; 
+}
+
+.info1{
+    position: relative;
+    top: .1rem;
+    font-size: .35rem;
+    /* margin-top: 10px; */
+    line-height: 15px;
+    /* border: 1px solid black; */
+    width: 140px;
+}
+
+.bookinfo{
+    display:inline-grid;
+    grid-template-columns:30% 70%;
+    position:relative
+}
+
+.top_detail{
+    display:inline-grid;
+    grid-template-rows:50% 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.clear1{
+    position: relative;
+    font-size: .9rem;
+    height: 10px;
+}
+.clear2{
+    position: relative;
+    border-top: 1px solid rgb(219, 213, 213);
+    width: 99%;
+    height:70px;
+    font-size: .9rem;
+}

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
 import Axios from 'axios'
 import './index.css'
 export default class index extends Component {
@@ -38,17 +39,19 @@ export default class index extends Component {
                 {
                     NewBook.map((data,index)=>{
                         return(
-                            <div key={NewBook[index].bookId} className='newbook'>
-                                <img className='bookimg'  src={NewBook[index].bookImageBig} alt="书本图片"/>
-                                <div className="tag2">新书</div>
-                                <p className='info'>
-                                    书名：{NewBook[index].bookName}<br/>
-                                    作者：{NewBook[index].bookAuthor}<br/>
-                                    分类：{NewBook[index].bookClassifyOne}<br/>
-                                    出版社：{NewBook[index].bookPress}<br/>
-                                    库存：{NewBook[index].bookResidue}<br/>
-                                </p>
-                            </div>
+                            <NavLink to={'/BookDetail/'+NewBook[index].bookId}>
+                                <div key={NewBook[index].bookId} className='newbook'>
+                                    <img className='bookimg'  src={NewBook[index].bookImageBig} alt="书本图片"/>
+                                    <div className="tag2">新书</div>
+                                    <p className='info'>
+                                        书名：{NewBook[index].bookName}<br/>
+                                        作者：{NewBook[index].bookAuthor}<br/>
+                                        分类：{NewBook[index].bookClassifyOne}<br/>
+                                        出版社：{NewBook[index].bookPress}<br/>
+                                        库存：{NewBook[index].bookResidue}<br/>
+                                    </p>
+                                </div>
+                            </NavLink>
                         )
                     })
                 }

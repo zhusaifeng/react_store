@@ -1,0 +1,17 @@
+.bookdetail_style{
+    width: 100%;
+    height: 100%;
+    display: inline-grid;
+    grid-template-rows:45% 34% 21% ;
+}
+
+.btn{
+    position:relative;
+    top: 30%;
+    left:20%;
+    border: 1px solid red;
+    width: 20%;
+    height: 30px;
+    padding: 7px;
+    font-size: .3rem;
+}

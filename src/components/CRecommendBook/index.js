@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
 import Axios from 'axios'
 import './index.css'
 export default class index extends Component {
@@ -39,17 +40,19 @@ export default class index extends Component {
                 {
                     RecommendBook.map((data,index)=>{
                         return(
-                            <div key={RecommendBook[index].bookId} className='newbook'>
-                                <img className='bookimg'  src={RecommendBook[index].bookImageBig} alt="书本图片"/>
-                                <div className="tag3">推荐</div>
-                                <p className='info'>
-                                    书名：{RecommendBook[index].bookName}<br/>
-                                    作者：{RecommendBook[index].bookAuthor}<br/>
-                                    分类：{RecommendBook[index].bookClassifyOne}<br/>
-                                    出版社：{RecommendBook[index].bookPress}<br/>
-                                    库存：{RecommendBook[index].bookResidue}<br/>
-                                </p>
-                            </div>
+                            <NavLink to={'/BookDetail/'+RecommendBook[index].bookId}>
+                                <div key={RecommendBook[index].bookId} className='newbook'>
+                                    <img className='bookimg'  src={RecommendBook[index].bookImageBig} alt="书本图片"/>
+                                    <div className="tag3">推荐</div>
+                                    <p className='info'>
+                                        书名：{RecommendBook[index].bookName}<br/>
+                                        作者：{RecommendBook[index].bookAuthor}<br/>
+                                        分类：{RecommendBook[index].bookClassifyOne}<br/>
+                                        出版社：{RecommendBook[index].bookPress}<br/>
+                                        库存：{RecommendBook[index].bookResidue}<br/>
+                                    </p>
+                                </div>
+                            </NavLink>
                         )
                     })
                 }

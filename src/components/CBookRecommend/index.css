@@ -1,0 +1,17 @@
+.img{
+    width: 25%;
+    /* height: 90px; */
+    margin: 5px;
+    display: inline-flex;
+    flex-direction: column;
+}
+.recommend{
+    border-top: 1px solid rgb(219, 213, 213);
+    border-bottom: 1px solid rgb(219, 213, 213);
+    position: relative;
+    width: 99%;
+    height: 140px;
+    margin-left: 4px;
+    overflow-x:hidden;
+    overflow-y: auto;
+}

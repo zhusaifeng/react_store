@@ -5,6 +5,7 @@ import {NavLink,Route,Redirect} from 'react-router-dom'
 import User from './pages/User'
 import MainBook from './pages/MainBook'
 import BookList from './pages/BookList'
+import BookDetail from './pages/BookDetail'
 import './App.css'
 // import Axios from 'axios'
 class App extends React.Component{
@@ -16,10 +17,11 @@ class App extends React.Component{
           <li className="topli"><NavLink activeClassName='active' to="/BookList" className='top'>书库</NavLink></li>
           <li className="topli"><NavLink activeClassName='active' to="User" className='top'>用户</NavLink></li>
         </ul> 
-        <div className='container'>
+        <div className='mid_container'>
         <Route path="/MainBook" component={MainBook}/>
         <Route path="/BookList" component={BookList}/>
         <Route path="/User" component={User}/>
+        <Route path="/BookDetail/:bookid" component={BookDetail}/>
         <Redirect to="/BookList"/>
         </div>
       </div>
