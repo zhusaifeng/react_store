@@ -6,6 +6,7 @@ import User from './pages/User'
 import MainBook from './pages/MainBook'
 import BookList from './pages/BookList'
 import BookDetail from './pages/BookDetail'
+import BookListMore from './pages/BookListMore'
 import './App.css'
 // import Axios from 'axios'
 class App extends React.Component{
@@ -22,6 +23,7 @@ class App extends React.Component{
         <Route path="/BookList" component={BookList}/>
         <Route path="/User" component={User}/>
         <Route path="/BookDetail/:bookid" component={BookDetail}/>
+        <Route path="/BookListMore/:bookclassify" component={BookListMore}/>
         <Redirect to="/BookList"/>
         </div>
       </div>

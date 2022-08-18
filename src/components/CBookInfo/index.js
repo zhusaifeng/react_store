@@ -10,6 +10,9 @@ export default class index extends Component {
         this.state={success:false}
         Axios.get('api/book/api-book-book-byid/'+props.bookid).then(
             response=>{
+                if(response.data.bookImageBig===''){
+                    response.data.bookImageBig='./1.png'
+                }
                 if(response.data.bookAuthor===''){
                     response.data.bookAuthor="更新中..."
                 }
@@ -53,8 +56,8 @@ export default class index extends Component {
                     </div>
                 </div>
                 <div>
-                    <p class="clear1">简介</p>
-                    <p class="clear2"> {BookInfo.bookDesc}</p>
+                    <p className="clear1">简介</p>
+                    <p className="clear2"> {BookInfo.bookDesc}</p>
                 </div>
             </div>
         </div>

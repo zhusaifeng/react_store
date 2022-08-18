@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Axios from 'axios'
 import './index.css'
 import SearchArea from '../../components/SearchArea'
+import {Link} from 'react-router-dom'
 
 export default class index extends Component {
 constructor(props){
@@ -33,11 +34,10 @@ render() {
             BookList.map((data,index)=>{
                 return(
                     <ul key={index} className="bookclassify">
-                        <li className="booklist">{BookList[index]}</li>
+                        <Link to={'/BookListMore/'+BookList[index]}><li className="booklist">{BookList[index]}</li></Link>
                     </ul>
                 )
             })
-            
         }
         </div>
     </div>
