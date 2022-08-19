@@ -1,0 +1,45 @@
+.container{
+    position:relative;
+    width: 100%;
+}
+.userinfo{
+    background-color: lightcyan;
+    height:300%;
+    width:100%;
+    font-size: 30%;
+    position: relative;
+}
+.center-container{
+    width: 70%;
+    height: 70%;
+    position: relative;
+    left: 15%;
+    top: 15%;
+    display: inline-grid;
+    grid-template-rows:60% 40% ;
+
+}
+.headphoto{
+    width: 20%;
+    position: relative;
+    top:30%;
+    left: 40%;
+}
+.setting{
+    position: relative;
+    /* border: 1px solid black; */
+    width: auto;
+    height: 20;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: .4rem;
+    /* margin-top: 20px; */
+}
+.setting .arrow{
+    position: absolute;
+    right:20px;
+    top: 9px;
+}
+.setting:hover{
+    color: rgb(240, 130, 40);
+}
